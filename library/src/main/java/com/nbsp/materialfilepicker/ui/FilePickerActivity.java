@@ -172,7 +172,8 @@ public class FilePickerActivity extends AppCompatActivity implements DirectoryFr
         if (getSupportActionBar() != null) {
             //final String titlePath = mCurrent.getAbsolutePath();
             // Show only path name
-            final String titlePath = mCurrent.getName();
+            String titlePath = mCurrent.getName();
+            if(titlePath.equals("0")){ titlePath=""; }
 
             if (mCurrent.getPath().equals(mStart.getPath())) {
                 getSupportActionBar().setDisplayHomeAsUpEnabled(false);
